@@ -20,7 +20,7 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## 进行自己的配置
+## 进行个人配置
 遇到app.json 解析失败，可能是mpvue-loader的问题
 
 ### step1
