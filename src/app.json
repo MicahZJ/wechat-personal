@@ -2,6 +2,24 @@
   "pages": [
     "pages/test/main"
   ],
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/test/main",
+        "text": "分页区1",
+        "iconPath": "./static/image/homepage.png",
+        "selectedIconPath": "./static/image/homepage_select.png"
+      },
+      {
+        "pagePath": "pages/test/main",
+        "text": "分页区2",
+        "iconPath": "./static/image/icon.png",
+        "selectedIconPath": "./static/image/icon_select.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
