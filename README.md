@@ -22,6 +22,11 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## 进行个人配置
 遇到app.json 解析失败，可能是mpvue-loader的问题
+mpvue 生命周期
+onShow()
+onLoad()
+onHide()
+onUnload()
 
 ### step1
 下载stylus 相关包
