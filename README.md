@@ -19,4 +19,18 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-# wechat-personal
+
+## 进行自己的配置
+遇到app.json 解析失败，可能是mpvue-loader的问题
+
+### step1
+下载stylus 相关包
+``` bash
+yarn add stylus stylus-loader -D
+```
+
+### step2
+下载pug 相关包
+``` bash
+yarn add  pug pug-loader -D
+```
