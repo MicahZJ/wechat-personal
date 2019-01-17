@@ -1,6 +1,5 @@
 <template lang="pug">
-  div.rank-wrapper 1
-
+  div.play-wrapper 2
 </template>
 
 <script src="./control.js"></script>

@@ -1,7 +1,7 @@
 import config from './config'
 import { badRequest, errRequest, wxNavBarLoading, wxHideNavBarLoading } from './wxapi'
 
-export default class Http {
+class Http {
   /**
    * get类型请求
    * @param url  subUrl
@@ -11,6 +11,7 @@ export default class Http {
    */
   async getRequest(_api, _param = {}, _lastresolve, _count) {
     _api = config.rootUrl + _api
+    console.log('url', config.rootUrl)
     return new Promise((resolve, reject) => {
       wxNavBarLoading()
       wx.request({
@@ -21,6 +22,7 @@ export default class Http {
         success: async res => {
           wxHideNavBarLoading()
           if (res.data.code === 4001) {
+            console.log('1')
             _count = _count || 0
             _count++
             if (_count > 2) {
@@ -31,9 +33,11 @@ export default class Http {
               this.getRequest(_api, _param, resolve, _count)
             }
           } else if (res.data.code === 500) {
+            console.log('2')
             let errstr = `${res.data.code}:${res.data.message}`
             errRequest(errstr)
           } else {
+            console.log('3')
             _lastresolve ? _lastresolve(res.data) : resolve(res.data)
           }
         },
@@ -66,6 +70,7 @@ export default class Http {
         success: async res => {
           wxHideNavBarLoading()
           if (res.data.code === 4001) {
+            console.log('1')
             _count = _count || 0
             _count++
             if (_count > 2) {
@@ -76,9 +81,11 @@ export default class Http {
               this.postRequest(_api, _param, resolve, _count)
             }
           } else if (res.data.code === 500 || res.data.code === 403) {
+            console.log('2')
             let errstr = `${res.data.code}:${res.data.message}`
             errRequest(errstr)
           } else {
+            console.log('3')
             _lastresolve ? _lastresolve(res.data) : resolve(res.data)
           }
         },
@@ -91,3 +98,5 @@ export default class Http {
     })
   }
 }
+
+export default new Http()

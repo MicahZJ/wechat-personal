@@ -5,6 +5,7 @@
         span.content-text(:class="{'active': toggleNum === item.id}") {{item.title}}
         span.select-line(:class="{'active': toggleNum === item.id}")
     price-box(v-if="toggleNum === 0")
+    play-box(v-if="toggleNum === 1")
 </template>
 
 <script src="./control.js"></script>
