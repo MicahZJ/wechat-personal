@@ -2,14 +2,13 @@ let rootUrl
 let wechatRoot
 
 if (process.env.NODE_ENV === 'production') {
-  // 正式环境api接口地址
+  // 正式环境
   rootUrl = ''
   wechatRoot = ''
 } else {
-  // 测试
+  // 测试环境
   rootUrl = 'https://api.readhub.cn'
   wechatRoot = 'https://sec-m.ctrip.com'
-  // mock server http://47.97.4.140
 }
 
 const config = {
