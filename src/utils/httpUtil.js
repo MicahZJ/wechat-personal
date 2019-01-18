@@ -10,8 +10,13 @@ class Http {
    * @returns {Promise<any>}
    */
   async getRequest(_api, _param = {}, _lastresolve, _count) {
-    _api = config.rootUrl + _api
-    console.log('url', config.rootUrl)
+    if (_param.xc) {
+      console.log('url', config.wechatRootUrl)
+      _api = config.wechatRootUrl + _api
+    } else {
+      console.log('url', config.rootUrl)
+      _api = config.rootUrl + _api
+    }
     return new Promise((resolve, reject) => {
       wxNavBarLoading()
       wx.request({
@@ -58,7 +63,13 @@ class Http {
    * @returns {Promise<any>}
    */
   async postRequest(_api, _param = {}, _lastresolve, _count) {
-    _api = config.rootUrl + _api
+    if (_param.xc) {
+      console.log('url', config.wechatRootUrl)
+      _api = config.wechatRootUrl + _api
+    } else {
+      console.log('url', config.rootUrl)
+      _api = config.rootUrl + _api
+    }
     return new Promise((resolve, reject) => {
       wxNavBarLoading()
       wx.request({

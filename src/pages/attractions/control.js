@@ -34,9 +34,7 @@ export default {
       console.log('执行上滑操作', this.toggleNum)
       switch (this.toggleNum) {
         case 0:
-          if (this.flagPlay) {
-            this.getTopicData()
-          }
+          this.flagPlay ? this.getTopicData() : null
           break
         case 1:
           break
@@ -48,25 +46,11 @@ export default {
      */
     toggleIndex(index) {
       this.toggleNum = index
-    },
-
-    /**
-     * 获取数据
-     */
-    async getTopicData() {
-      let Api = '/topic'
-      let requestData = {
-        lastCursor: this.lastCursor,
-        pageSize: 20
-      }
-      console.log('123')
-      this.flagPlay = false
-      const res = await this.$get(Api, requestData)
-      if (res) {
-        this.flagPlay = true
-        this.lastCursor = res.data[res.data.length - 1].order
-        this.topicData = this.topicData.concat(...res.data)
-        console.log('长度', this.topicData)
+      switch (this.toggleNum) {
+        case 0:
+          this.topicData = []
+          this.lastCursor = ''
+          this.flagPlay ? this.getTopicData() : null
       }
     }
   },

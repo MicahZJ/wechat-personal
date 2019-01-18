@@ -4,7 +4,7 @@
       li.box-content(v-for="(item, index) in arrList" :key="item.id" @click="toggleIndex(index)")
         span.content-text(:class="{'active': toggleNum === item.id}") {{item.title}}
         span.select-line(:class="{'active': toggleNum === item.id}")
-    price-box(v-if="toggleNum === 0")
+    price-box(v-if="toggleNum === 0" :getTopicData="topicData")
     play-box(v-if="toggleNum === 1")
 </template>
 

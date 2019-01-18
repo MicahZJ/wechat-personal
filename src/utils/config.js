@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   // 测试
   rootUrl = 'https://api.readhub.cn'
-  wechatRoot = ''
+  wechatRoot = 'https://sec-m.ctrip.com'
   // mock server http://47.97.4.140
 }
 
