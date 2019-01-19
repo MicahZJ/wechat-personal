@@ -3,7 +3,7 @@ let wechatRoot
 
 if (process.env.NODE_ENV === 'production') {
   // 正式环境
-  rootUrl = ''
+  rootUrl = 'https://api.readhub.cn'
   wechatRoot = ''
 } else {
   // 测试环境

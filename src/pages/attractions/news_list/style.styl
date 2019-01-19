@@ -1,0 +1,52 @@
+.news-wrapper
+  width 100vw
+  height auto
+  overflow hidden
+  margin-top 50px
+  .news-box
+    border-bottom 1px solid rgba(0,0,0,.2)
+    .base-content
+      width 100vw
+      height: 101px
+      padding 10px
+      box-sizing border-box
+      display flex
+      justify-content space-between
+      align-items center
+      .box-left
+        width 70%
+        .left-subtitle
+          width 100%
+          font-size 16px
+          font-weight 400
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          &.checked
+            color rgba(0,0,0,.6)
+        .left-time
+          font-size 14px
+          color rgba(0,0,0,.6)
+      .box-right
+        width 30%
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        .right-icon
+          width 30px
+          height 30px
+        .right-subtitle
+          font-size 14px
+          font-weight 400
+          color black
+          margin-top 4px
+    .more-content
+      width 100vw
+      padding 0 10px 10px
+      box-sizing border-box
+      .more-text
+        font-size 14px
+        color rgba(0,0,0,.6)
