@@ -1,0 +1,41 @@
+.swiper-wrapper
+  width 100vw
+  height auto
+  overflow hidden
+  .swiper-box
+    height 200px
+    .swiper-image
+      width 100vw
+      height 200px
+  .swiper-text-box
+    //width 100vw
+    width: calc(100% - 40px)
+    margin 0 auto
+    height auto
+    padding 24px 20px 34px
+    box-sizing border-box
+    border-bottom 1px solid #eaeeef
+    .title-text
+      font-size 20px
+      color black
+      font-weight 400
+      overflow:hidden;
+      text-overflow:ellipsis;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+    .nickname-box
+      margin 7px 0
+      display flex
+      justify-content flex-start
+      align-items center
+      .box-left
+        font-size 12px
+        color rgba(0,0,0,.6)
+      .box-right
+        margin-left 6px
+        font-size 12px
+        color rgba(0,0,0,.6)
+    .content-text
+      font-size 12px
+      color rgba(0,0,0,.6)

@@ -1,3 +1,4 @@
+import { wxNavPush } from '../../../utils/wxapi'
 
 export default {
   data() {
@@ -12,6 +13,15 @@ export default {
     showMore(item) {
       item.showFlag = !item.showFlag
       item.checkFlag = true
+    },
+
+    /**
+     * 跳转web-view
+     */
+    toWebView(item) {
+      console.log('item', item)
+      let page = `/pages/web_view/main?mobileUrl=${item.mobileUrl}`
+      wxNavPush(page)
     }
   },
   props: [

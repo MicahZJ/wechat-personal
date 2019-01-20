@@ -1,21 +1,22 @@
 {
   "pages": [
-    "pages/attractions/main",
-    "pages/test/main"
+    "pages/internet_news/main",
+    "pages/develop_hot/main",
+    "pages/web_view/main"
   ],
   "tabBar": {
     "backgroundColor": "#ffffff",
     "selectedColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/attractions/main",
+        "pagePath": "pages/internet_news/main",
         "text": "首页",
         "iconPath": "./static/image/tabbar/homepage.png",
         "selectedIconPath": "./static/image/tabbar/homepage_select.png"
       },
       {
-        "pagePath": "pages/test/main",
-        "text": "测试2",
+        "pagePath": "pages/develop_hot/main",
+        "text": "infoQ",
         "iconPath": "./static/image/tabbar/icon.png",
         "selectedIconPath": "./static/image/tabbar/icon_select.png"
       }

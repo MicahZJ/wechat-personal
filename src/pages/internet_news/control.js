@@ -31,6 +31,7 @@ export default {
       this.topicData = []
       this.flagPlay = false
       this.flagPrice = false
+      clearInterval(this.timer)
     },
 
     /**
@@ -69,7 +70,6 @@ export default {
         lastCursor: this.lastCursor,
         pageSize: 20
       }
-      console.log('123')
       this.flagPlay = false
       const res = await this.$get(api, requestData)
       if (res) {
@@ -84,7 +84,7 @@ export default {
           item.checkFlag = false // 是否已看过
           return item
         })
-        console.log('长度', this.topicData)
+        // console.log('长度', this.topicData)
         this.checkUpdate()
       }
     },
@@ -93,7 +93,6 @@ export default {
      * 检查更新
      */
     checkUpdate() {
-      clearInterval(this.timer)
       this.timer = setInterval(() => {
         this.getUpdateInfo()
       }, 60000 * 10)
@@ -112,6 +111,15 @@ export default {
       if (res) {
         this.count = res.count
       }
+    },
+
+    /**
+     * 加载最新
+     */
+    showUpdate() {
+      this.clearData()
+      this.getTopicData()
+      this.checkUpdate()
     }
   },
   props: [],
