@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "mpvue": "^1.0.11",
+    "flyio": "^0.6.9",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

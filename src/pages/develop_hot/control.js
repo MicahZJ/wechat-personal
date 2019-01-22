@@ -50,11 +50,12 @@ export default {
      * 获取资讯数据
      */
     async getRecommendData() {
+      console.log('flyUrl2')
       let api = '/public/v1/article/getIndexList'
       let requestData = {
         xc: 'xc'
       }
-      const res = await this.$get(api, requestData)
+      const res = await this.$FlyHttp.httpGet(api, requestData)
     }
   },
   props: [],
@@ -63,7 +64,7 @@ export default {
     mainBox
   },
   onShow() {
-    // this.getRecommendData()
+    this.getRecommendData()
     this.getNewsData()
   },
   onShareAppMessage() {
