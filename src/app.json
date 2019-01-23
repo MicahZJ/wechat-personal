@@ -2,7 +2,8 @@
   "pages": [
     "pages/internet_news/main",
     "pages/develop_hot/main",
-    "pages/web_view/main"
+    "pages/web_view/main",
+    "pages/bilibili_video/main"
   ],
   "tabBar": {
     "backgroundColor": "#ffffff",
@@ -10,7 +11,7 @@
     "list": [
       {
         "pagePath": "pages/internet_news/main",
-        "text": "首页",
+        "text": "readHub",
         "iconPath": "./static/image/tabbar/homepage.png",
         "selectedIconPath": "./static/image/tabbar/homepage_select.png"
       },

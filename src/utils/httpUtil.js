@@ -10,9 +10,12 @@ class Http {
    * @returns {Promise<any>}
    */
   async getRequest(_api, _param = {}, _lastresolve, _count) {
-    if (_param.xc) {
+    if (_param.infoQ) {
       console.log('url', config.wechatRootUrl)
       _api = config.wechatRootUrl + _api
+    } else if (_param.bilibiliUrl) {
+      console.log('url', config.rootUrl)
+      _api = config.bilibiliUrl + _api
     } else {
       console.log('url', config.rootUrl)
       _api = config.rootUrl + _api
@@ -63,7 +66,7 @@ class Http {
    * @returns {Promise<any>}
    */
   async postRequest(_api, _param = {}, _lastresolve, _count) {
-    if (_param.xc) {
+    if (_param.infoQ) {
       console.log('url', config.wechatRootUrl)
       _api = config.wechatRootUrl + _api
     } else {

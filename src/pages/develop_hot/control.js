@@ -25,7 +25,7 @@ export default {
     async getNewsData() {
       let api = '/public/v1/my/recommond'
       let requestData = {
-        xc: 'xc',
+        infoQ: 'infoQ',
         size: 12,
         score: this.lastScore
       }
