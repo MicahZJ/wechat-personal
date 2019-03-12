@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mine/main",
     "pages/internet_news/main",
     "pages/develop_hot/main",
     "pages/web_view/main",
@@ -9,6 +10,12 @@
     "backgroundColor": "#ffffff",
     "selectedColor": "#000000",
     "list": [
+      {
+        "pagePath": "pages/mine/main",
+        "text": "mine",
+        "iconPath": "./static/image/tabbar/icon.png",
+        "selectedIconPath": "./static/image/tabbar/icon_select.png"
+      },
       {
         "pagePath": "pages/internet_news/main",
         "text": "readHub",
