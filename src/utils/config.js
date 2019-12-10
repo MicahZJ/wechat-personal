@@ -1,6 +1,7 @@
 let rootUrl
 let wechatRoot
 let bilibiliUrl
+let wechatUrl
 
 if (process.env.NODE_ENV === 'production') {
   // 正式环境
@@ -11,12 +12,14 @@ if (process.env.NODE_ENV === 'production') {
   rootUrl = 'https://api.readhub.cn'
   wechatRoot = 'https://www.infoq.cn'
   bilibiliUrl = 'https://api.bilibili.com'
+  wechatUrl = 'http://localhost:3000/wechat'
 }
 
 const config = {
   rootUrl: rootUrl,
   wechatRootUrl: wechatRoot,
-  bilibiliUrl: bilibiliUrl
+  bilibiliUrl: bilibiliUrl,
+  wechatUrl: wechatUrl
 }
 
 export default config

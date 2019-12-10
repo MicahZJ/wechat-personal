@@ -6,6 +6,15 @@
     "pages/web_view/main",
     "pages/bilibili_video/main"
   ],
+  "subPackages": [
+    {
+      "root": "pages/pages_subpack",
+      "name": "subPackages",
+      "pages": [
+        "demo/main"
+      ]
+    }
+  ],
   "tabBar": {
     "backgroundColor": "#ffffff",
     "selectedColor": "#000000",

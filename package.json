@@ -18,8 +18,11 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "mpvue": "^1.0.11",
+    "echarts": "^4.2.1",
     "flyio": "^0.6.9",
+    "melanke-watchjs": "^1.5.0",
+    "mpvue": "^1.0.11",
+    "mpvue-echarts": "^0.3.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

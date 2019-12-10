@@ -111,6 +111,51 @@ class Http {
       })
     })
   }
+
+  /**
+   * 小程序请求
+   */
+  async postRequestWehat(_api, _param = {}, _lastresolve, _count) {
+    _api = config.wechatUrl + _api
+
+    return new Promise((resolve, reject) => {
+      wxNavBarLoading()
+      wx.request({
+        url: _api,
+        method: 'POST',
+        data: _param,
+        header: {
+        },
+        success: async res => {
+          wxHideNavBarLoading()
+          if (res.data.code === 4001) {
+            console.log('1')
+            _count = _count || 0
+            _count++
+            if (_count > 2) {
+              errRequest('登录异常，请联系客服')
+            } else {
+              // _LoginManager.clearSessionKey()
+              // param.client_session_key = _LoginManager.getSessionKey()
+              this.postRequest(_api, _param, resolve, _count)
+            }
+          } else if (res.data.code === 500 || res.data.code === 403) {
+            console.log('2')
+            let errstr = `${res.data.code}:${res.data.message}`
+            errRequest(errstr)
+          } else {
+            console.log('3')
+            _lastresolve ? _lastresolve(res.data) : resolve(res.data)
+          }
+        },
+        fail: err => {
+          reject(err)
+          wxHideNavBarLoading()
+          badRequest()
+        }
+      })
+    })
+  }
 }
 
 export default new Http()

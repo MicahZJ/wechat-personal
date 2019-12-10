@@ -1980,6 +1980,12 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+echarts@^4.2.1:
+  version "4.2.1"
+  resolved "http://registry.npm.taobao.org/echarts/download/echarts-4.2.1.tgz#9a8ea3b03354f86f824d97625c334cf16965ef03"
+  dependencies:
+    zrender "4.0.7"
+
 editorconfig@^0.15.2:
   version "0.15.2"
   resolved "http://registry.npm.taobao.org/editorconfig/download/editorconfig-0.15.2.tgz#047be983abb9ab3c2eefe5199cb2b7c5689f0702"
@@ -3590,6 +3596,10 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "http://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
+melanke-watchjs@^1.5.0:
+  version "1.5.0"
+  resolved "http://registry.npm.taobao.org/melanke-watchjs/download/melanke-watchjs-1.5.0.tgz#d82354ae47ed69580e7237644e7043e367534754"
+
 mem@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/mem/download/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
@@ -3735,6 +3745,10 @@ move-concurrently@^1.0.1:
     mkdirp "^0.5.1"
     rimraf "^2.5.4"
     run-queue "^1.0.3"
+
+mpvue-echarts@^0.3.1:
+  version "0.3.1"
+  resolved "http://registry.npm.taobao.org/mpvue-echarts/download/mpvue-echarts-0.3.1.tgz#4c5baee4c9e89260ab2944ba504527598da7211e"
 
 mpvue-loader@^1.1.2:
   version "1.1.4"
@@ -6167,3 +6181,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+zrender@4.0.7:
+  version "4.0.7"
+  resolved "http://registry.npm.taobao.org/zrender/download/zrender-4.0.7.tgz#15ae960822f5efed410995d37e5107fe3de10e6d"
